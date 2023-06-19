@@ -1,0 +1,71 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #B8E1DD;
+    --winning-boxes: #3A9188;
+}
+
+body {
+    color: var(--green);
+    font-family: 'Walter Turncoat', cursive;
+}
+
+h1 {
+    font-size: 56px;
+    text-transform: uppercase;
+}
+
+.container {
+    padding: 40px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #062925;
+    flex-direction: column;
+}
+
+#board {
+    width: 360px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.box {
+    height: 120px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: solid 3px;
+    border-bottom: solid 3px;
+    color: var(--green);
+    font-size: 130px;
+}
+.box:nth-child(3n) {
+    border-right: none;
+}
+.box:nth-child(6) ~ .box {
+    border-bottom: none;
+} 
+
+button {
+    padding: 8px 16px;
+    border-radius: 15px;
+    background-color: var(--green);
+    color: #333;
+    border-color: var(--green);
+    font-size: 20px;
+    transition: transform 200ms;
+    font-weight: 600;
+    margin-top: 30px;
+}
+button:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
+}
